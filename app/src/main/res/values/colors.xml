@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background_grey">#FBFBFB</color>
+
+    <!-- scanner -->
+    <color name="scan_mask">#60000000</color>
+    <color name="scan_laser">#cc0000</color>
+    <color name="scan_dot">#ff6600</color>
+    <color name="scan_result_view">#b0000000</color>
+    <color name="green_1">#c099cc00</color>
+
+    <color name="gray">#f3f3f3</color>
+    <color name="gray_bfbfbf">#bfbfbf</color>
+    <color name="gray_7D7D7D">#7D7D7D</color>
+    <color name="gray_8a8a8a">#8a8a8a</color>
+    <color name="icon_checked">#4b5ba7</color>
+
+    <!--字体颜色-->
+    <color name="font_color">#0b182B</color>
+    <color name="secondary_font_color">#404040</color>
+    <color name="hint_font_color">#9DA6B7</color>
+    <color name="info_font_color">#BDC1CC</color>
+    <color name="font_green">#5C9279</color>
+
+    <!--按钮点击效果-->
+    <color name="botton_normal">#5C9279</color>
+    <color name="botton_click">#3A5C4C</color>
+    <!--主题帖浏览页话题按钮的背景颜色-->
+    <color name="topic_in_post_background">#F3F3F5</color>
+
+    <!--自由谈话题的背景颜色-->
+    <color name="topic_blue">#6885B1</color>
+    <color name="topic_green">#80A5A6</color>
+    <color name="topic_grey">#9F9F89</color>
+    <color name="topic_brown">#BAA68A</color>
+
+    <!--漂流瓶的背景颜色-->
+    <color name="bottle_3">#98CAD9</color>
+    <color name="bottle_2">#9FD1D5</color>
+    <color name="bottle_1">#BAC7C5</color>
+    <color name="bottle_4">#BAB1B1</color>
+    <color name="bottle_5">#EED5CF</color>
+    
+    <color name="book_detail_review_background">#F5F5F5</color>
+</resources>

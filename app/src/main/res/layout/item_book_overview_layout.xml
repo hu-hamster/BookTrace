@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_book_root_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--衬底-->
+    <View
+        android:id="@+id/view_item_book_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--书籍封面图-->
+    <ImageView
+        android:id="@+id/iv_item_book_image"
+        android:layout_width="94dp"
+        android:layout_height="130dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="15dp"
+        android:elevation="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </ImageView>
+    <!--书籍标题-->
+    <TextView
+        android:id="@+id/tv_item_book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:elevation="3dp"
+        app:layout_constraintTop_toTopOf="@id/view_item_book_container"
+        app:layout_constraintLeft_toRightOf="@id/iv_item_book_image">
+    </TextView>
+    <!--书籍作者-->
+    <TextView
+        android:id="@+id/tv_item_book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="author"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="13sp"
+        android:elevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_book_title"
+        app:layout_constraintLeft_toRightOf="@id/iv_item_book_image">
+    </TextView>
+    <!--书籍简介-->
+    <!--maxLines 限制行数-->
+    <!--ellipsize 自动在末尾补上省略号-->
+    <TextView
+        android:id="@+id/tv_item_book_abstract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="40dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本"
+        android:textSize="13sp"
+        android:elevation="3dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_item_book_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_book_author"
+        app:layout_constraintRight_toRightOf="@id/view_item_book_container"/>
+
+    <!--本书所在书架的名字，也许可以省略-->
+    <TextView
+        android:id="@+id/tv_item_book_belong_bookshelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bookshelf"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        app:layout_constraintRight_toRightOf="@id/view_item_book_container"
+        app:layout_constraintTop_toTopOf="@id/view_item_book_container">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

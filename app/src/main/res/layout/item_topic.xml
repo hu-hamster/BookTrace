@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardBackgroundColor="@color/topic_blue"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/root_item_topic"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_item_topic_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="你读过的第一本哲学书是什么书？"
+            android:elevation="1dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/tv_item_topic_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_topic_title"
+            android:layout_marginTop="36dp"
+            android:layout_marginHorizontal="16dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="测试文本测试文本"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/topic_ic_participant"
+            android:layout_marginHorizontal="2dp"
+            app:layout_constraintRight_toLeftOf="@id/tv_item_topic_participant"
+            app:layout_constraintTop_toTopOf="@id/tv_item_topic_participant"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_topic_participant"
+            />
+        <TextView
+            android:id="@+id/tv_item_topic_participant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已有 18 人参与"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/topic_ic_symbol"
+            android:alpha="0.1"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginEnd="-10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--右上角收藏按钮-->
+    <item
+        android:id="@+id/item_book_detail_collect"
+        android:enabled="true"
+        android:icon="@drawable/ic_book_collect"
+        app:showAsAction="ifRoom"
+        android:title="收藏本书" />
+</menu>

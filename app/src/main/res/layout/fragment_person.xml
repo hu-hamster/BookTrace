@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PersonFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/appbar"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:theme="@style/Theme.BookTrace.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.BookTrace.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <ImageView
+            android:id="@+id/person_iv_avatar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/default_avatar"
+            android:background="@color/transparent_easy_photos"/>
+
+        <TextView
+            android:id="@+id/person_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/person_iv_avatar"
+            app:layout_constraintBottom_toTopOf="@id/person_tv_description"
+            app:layout_constraintLeft_toRightOf="@id/person_iv_avatar"
+            android:hint="用户名"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/person_tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="此人很懒，什么都没有写"
+            app:layout_constraintTop_toBottomOf="@id/person_tv_name"
+            app:layout_constraintBottom_toBottomOf="@id/person_iv_avatar"
+            app:layout_constraintLeft_toRightOf="@id/person_iv_avatar"
+            android:textSize="15sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_cl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_cl1"
+        android:paddingVertical="12dp"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/tv_part1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/font_color"
+            android:textSize="18sp"
+            android:text="我的书馆"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_bt_person"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="36dp"
+            android:onClick="onClick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_part1_title"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/person_ic_person"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="个人中心"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person_bt_drift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/person_bt_person"
+            app:layout_constraintRight_toLeftOf="@id/person_bt_topic"
+            app:layout_constraintTop_toTopOf="@id/person_bt_person"
+            app:layout_constraintBottom_toBottomOf="@id/person_bt_person"
+            android:orientation="vertical"
+            android:onClick="onClick">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_ic_bottle" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="漂流瓶"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person_bt_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/person_bt_drift"
+            app:layout_constraintRight_toLeftOf="@id/person_bt_collect"
+            app:layout_constraintTop_toTopOf="@id/person_bt_drift"
+            app:layout_constraintBottom_toBottomOf="@id/person_bt_drift"
+            android:orientation="vertical"
+            android:onClick="onClick">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_ic_discuss"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="参与话题"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person_bt_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/person_bt_topic"
+            app:layout_constraintBottom_toBottomOf="@id/person_bt_topic"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/person_ic_collect"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="我的收藏"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
